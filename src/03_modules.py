@@ -10,12 +10,22 @@ import sys
 
 # Print out the command line arguments in sys.argv, one per line:
 # YOUR CODE HERE
+# - Run this file in the terminal!! In the terminal, cd into src, then type:
+#   - py 03_modules.py something1 something2
+#       - 'py' for python, <filename> <input1> <input2>
+mySys = sys.argv
+print(mySys)
+for i in mySys:
+    print(i)
+    # prints mySys[i]
 
 # Print out the OS platform you're using:
 # YOUR CODE HERE
+print(sys.platform)
 
 # Print out the version of Python you're using:
 # YOUR CODE HERE
+print(sys.version_info)
 
 
 import os
@@ -23,9 +33,12 @@ import os
 
 # Print the current process ID
 # YOUR CODE HERE
+print(os.getpid())
 
 # Print the current working directory (cwd):
 # YOUR CODE HERE
+print(os.getcwdb())
 
 # Print out your machine's login name
 # YOUR CODE HERE
+print(os.getlogin())

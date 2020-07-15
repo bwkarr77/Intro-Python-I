@@ -30,3 +30,19 @@ it should use today’s date to get the month and year.
 import sys
 import calendar
 from datetime import datetime
+
+mySys = sys.argv
+curDate = datetime.now()
+
+def set_date(x):
+    try:
+        user_date = calendar.monthcalendar(int(x[2]), int(x[1]))
+        return user_date
+    except:
+        user_date = calendar.monthcalendar(curDate.year, int(x[1]))
+        return user_date
+
+if len(mySys) < 2:
+    print(calendar.monthcalendar(curDate.year, curDate.month))
+elif len(mySys) >= 2:
+    print(set_date(mySys))
